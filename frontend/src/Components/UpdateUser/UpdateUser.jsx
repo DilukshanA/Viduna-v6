@@ -18,7 +18,7 @@ export const UpdateUser = () => {
 
     const updateData = ()=> {
         console.log('check updateData',name,email);
-        fetch('http://localhost:4000/updateuser',{
+        fetch('https://viduna-v6-backend.onrender.com/updateuser',{
             method:"POST",
             crossDomain:true,
             headers:{

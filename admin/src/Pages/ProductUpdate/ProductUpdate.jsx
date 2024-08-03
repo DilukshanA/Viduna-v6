@@ -130,7 +130,7 @@ const handleOwner_imageChange = async (e) => {
     const updateProduct = () => {
       console.log(course_name);
 
-      fetch('http://localhost:4000/updateproduct',{
+      fetch('https://viduna-v6-backend.onrender.com/updateproduct',{
         method:"POST",
         crossDomain:true,
         headers:{

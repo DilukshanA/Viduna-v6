@@ -29,7 +29,7 @@ const AddProductNew = () => {
         //formData.append('product',image);
     
     /*
-        await fetch('http://localhost:4000/upload',{
+        await fetch('https://viduna-v6-backend.onrender.com/upload',{
             method:'POST',
             headers:{
                 Accept:'application/json',
@@ -45,7 +45,7 @@ const AddProductNew = () => {
             console.log(product);
     
     
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://viduna-v6-backend.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

@@ -166,7 +166,7 @@ const AddProductv2 = () => {
         let product = productDetails;
         console.log(product);
     
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://viduna-v6-backend.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

@@ -9,7 +9,7 @@ const AllUsersList = () => {
     const [allUserData, setAllUserData] = useState([]);
     
     const fetchInfo = async () =>{
-        fetch('http://localhost:4000/getallusers',{
+        fetch('https://viduna-v6-backend.onrender.com/getallusers',{
             method:"GET",
           })
           .then((res)=>res.json())
@@ -24,7 +24,7 @@ const AllUsersList = () => {
     },[])
 
     const delete_user = async (id)=>{
-        await fetch('http://localhost:4000/deleteuser',{
+        await fetch('https://viduna-v6-backend.onrender.com/deleteuser',{
           method: 'POST',
           headers:{
             Accept:'application/json',

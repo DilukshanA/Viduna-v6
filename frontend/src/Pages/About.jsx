@@ -17,7 +17,7 @@ const About = () => {
     const fetchData = async () => {
       const token = localStorage.getItem('auth-token');
 
-      const response = await fetch('http://localhost:4000/getuserdatanew',{
+      const response = await fetch('https://viduna-v6-backend.onrender.com/getuserdatanew',{
         method:'POST',
         headers: {
           'content-type':'application/json',
@@ -46,7 +46,7 @@ const About = () => {
   
 
   useEffect(()=>{
-    fetch('http://localhost:4000/getallusers',{
+    fetch('https://viduna-v6-backend.onrender.com/getallusers',{
       method:"GET",
     })
     .then((res)=>res.json())

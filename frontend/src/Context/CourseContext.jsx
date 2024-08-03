@@ -20,7 +20,7 @@ const CourseContextProvider = (props) => {
         const fetchData = async () => {
           const token = localStorage.getItem('auth-token');
     
-          const response = await fetch('http://localhost:4000/getcurrentuserdata',{
+          const response = await fetch('https://viduna-v6-backend.onrender.com/getcurrentuserdata',{
             method:'POST',
             headers: {
               'content-type':'application/json',
@@ -43,12 +43,12 @@ const CourseContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(()=>{
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://viduna-v6-backend.onrender.com/allproducts')
         .then((response)=>response.json())
         .then((data)=>setAll_courses(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcart', {
+            fetch('https://viduna-v6-backend.onrender.com/getcart', {
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -74,7 +74,7 @@ const CourseContextProvider = (props) => {
     
                 // Make the fetch call only if the item is not already in the cart
                 if (localStorage.getItem('auth-token')) {
-                    fetch('http://localhost:4000/addtocart', {
+                    fetch('https://viduna-v6-backend.onrender.com/addtocart', {
                         method: 'POST',
                         headers: {
                             Accept: 'application/form-data',
@@ -97,7 +97,7 @@ const CourseContextProvider = (props) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
        // console.log(cartItems);
        if(localStorage.getItem('auth-token')){
-        fetch('http://localhost:4000/addtocart',{
+        fetch('https://viduna-v6-backend.onrender.com/addtocart',{
             method:'POST',
             headers:{
                 Accept:'application/form-data',
@@ -115,7 +115,7 @@ const CourseContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/removefromcart',{
+            fetch('https://viduna-v6-backend.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',

@@ -140,7 +140,7 @@ const AddProductv4 = () => {
 
         if(productDetails.course_name && productDetails.price && productDetails.course_level && productDetails.category && productDetails.owner_name && productDetails.product_details && productDetails.image && productDetails.Product_image && productDetails.owner_logo)
             {
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://viduna-v6-backend.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -158,7 +158,7 @@ const AddProductv4 = () => {
         }
         {/** 
     
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://viduna-v6-backend.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
