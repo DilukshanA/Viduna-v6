@@ -53,7 +53,7 @@ const Contact = () => {
           <span className='contact-bottom-left-mail'>076 460 89 XX</span>
           <div className="contact-bottom-left-social-icon">
             
-            <Link to='http://wa.me/+94740315962' target='_Blank' rel="noopener noreferrer">
+            <Link to='http://wa.me/+94764608975' target='_Blank' rel="noopener noreferrer">
               <img className='contact-bottom-left-whatsapp' src={whatsapp_icon} alt=''/>
             </Link>
 
