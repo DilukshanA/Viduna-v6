@@ -144,9 +144,9 @@ const handleOwner_imageChange = async (e) => {
             price:price,
             course_level:course_level,
             category:category,
-            image:imageURL,
-            Product_image:Product_imageURL,
-            owner_logo:owner_imageURL,
+            image:imageURL?imageURL:image,
+            Product_image:Product_imageURL?Product_imageURL:Product_image,
+            owner_logo:owner_imageURL?owner_imageURL:owner_logo,
             owner_name:owner_name,
             product_details:product_details,
 
